@@ -45,21 +45,21 @@ class App extends Component {
 
     return (
       <>
-        <h1 className="app-title">Dictionary</h1>
-        <Search
-          className="search-field"
-          placeholder="Search for a word..."
-          onSearchChange={this.onSearchChange}
-        />
-        <Button
-          className="search-button"
-          handleSearchClick={this.handleSearchClick}
-        />
-
-        {error ? <p className="error-message">{error}</p> : null}
-
-        {/* Render the Card component */}
-        {words.length > 0 && <Card words={words} />}
+        <div className="app">
+          <h1 className="app-title">Dictionary</h1>
+          <Search
+            className="search-field"
+            placeholder="Search for a word..."
+            onSearchChange={this.onSearchChange}
+          />
+          <Button
+            className="search-button"
+            handleSearchClick={this.handleSearchClick}
+          />
+          {error ? <p className="error-message">{error}</p> : null}
+          {/* Render the Card component */}
+          {words.length > 0 && <Card words={words} />}
+        </div>
       </>
     );
   }
